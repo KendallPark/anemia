@@ -4,6 +4,13 @@
   visibility: hidden;
 }
 
+.lab {
+  font-size: 16px;
+  p {
+    margin: 8px;
+  }
+}
+
 .lab-content.vis .lab {
   visibility: visible;
 }
