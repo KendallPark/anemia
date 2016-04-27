@@ -1,11 +1,11 @@
 class Finding
-  def initialize(finding_name)
-    yaml = YAML::load_file(Rails.root.join("config", "labs.yml"))
-    findings = yaml["findings"][finding_name]
-    @name = finding_name
-    @abnormal = findings.fetch("abnormal")
-    @normal = findings.fetch("normal")
-    @group = findings.fetch("group")
+  attr_reader :name, :group
+  def initialize(params)
+    @name = params.fetch("name")
+    @abnormal = params.fetch("abnormal")
+    @normal = params.fetch("normal")
+    @group = params.fetch("group")
+    @group = @name if @group == "self"
   end
 
   def desc(norm_or_ab="normal")
@@ -17,9 +17,8 @@ class Finding
     end
   end
 
-  def accept(visitor, norm_or_ab, y_n)
-    norm_or_ab = "normal" unless y_n
-    visitor.add_finding @group, @name, desc(norm_or_ab), y_n
+  def accept(visitor, norm_or_ab)
+    visitor.add_study @group, @name, desc(norm_or_ab)
   end
 
 end

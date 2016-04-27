@@ -18,22 +18,22 @@ steps:
             reqs:
               - Serum Iron: low
               - TIBC:
-                  - norm
+                  - normal
                   - low
-              - Ferritin: norm
+              - Ferritin: normal
             answer:
               - Anemia of chronic disease (infection, inflammation, malignancy)
           -
             reqs:
               - Serum Iron:
-                  - norm
+                  - normal
                   - high
               - TIBC:
-                  - norm
+                  - normal
                   - high
                   - low
               - Ferritin:
-                  - norm
+                  - normal
                   - high
             children:
               -
@@ -50,12 +50,12 @@ steps:
                   - Alpha or beta thalassemia
       -
         reqs:
-          - MCV: norm
+          - MCV: normal
         children:
           -
             reqs:
               - LDH: high
-              - Direct Bilirubin: norm
+              - Direct Bilirubin: normal
               - Total Bilirubin: high
               - Haptoglobin: low
               - Schistocytes: abnormal
@@ -77,7 +77,7 @@ steps:
               - Renal insufficiency
           -
             reqs:
-              - Reticulocyte Count: norm
+              - Reticulocyte Count: normal
             answer:
               - Bone marrow suppression
       -
@@ -100,7 +100,7 @@ steps:
           -
             reqs:
               - Serum Folate: low
-              - Methylmalonate: norm
+              - Methylmalonate: normal
               - Homocysteine: high
             answer:
               - Folate deficiency
