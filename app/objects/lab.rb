@@ -6,7 +6,6 @@ class Lab
   def initialize(lab_name)
     yaml = YAML::load_file(Rails.root.join("config", "labs.yml"))
     lab = yaml["labs"][lab_name]
-    binding.pry unless lab
     @name = lab_name
     @min = lab.fetch("min")
     @norm_min = lab.fetch("norm_min")
