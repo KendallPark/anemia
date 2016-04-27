@@ -1,0 +1,54 @@
+<div class="row" id="answers">
+  <div class="col-md-6">
+    <ul class="list-group">
+      <% @groups.keys.sort.each do |group_name, index| %>
+        <li class="list-group-item <%= @groups[group_name][:necessary] ? "necessary" : "unnecessary" %>">
+          <div class="lab-content" id="<%= group_name.gsub(/( )/, '_').downcase!%>_content">
+          <div class="order">
+            <button class="btn btn-default order-btn" id="<%= group_name.gsub(/( )/, '_').downcase!
+%>">
+             Order
+            </button>
+          </div>
+          <h4 class="list-group-item-heading"><%= group_name %></h4>
+            <div class="lab hid">
+            <% @groups[group_name].reject{|k,v| k == :necessary}.each do |lab_name, lab| %>
+                <p><%= lab[:text] %></p>
+            <%end%>
+            </div>
+          </div>
+        </li>
+      <%end%>
+    </ul>
+  </div>
+  <div class="col-md-6">
+    <button class="btn btn-large btn-primary" id="check_answers">Check Answers!</button>
+    <h3>What is on your DDx?</h3>
+    <% @ddx.each do |diagnosis| %>
+      <div class="checkbox <%= diagnosis[:correct] ? "correct" : "incorrect" %>">
+          <label>
+            <input type="checkbox"> <div class="text-label"><%= diagnosis[:name] %></div>
+          </label>
+      </div>
+      <%end%>
+  </div>
+</div>
+
+<script>
+  var labs = <%= raw @rails_side_json %>
+  labs.forEach( function(lab) {
+    $("#"+lab).click(function(e) {
+      $("#"+lab+"_content").addClass("vis");
+    });
+    if(lab === "cbc") {
+      $("#"+lab).click();
+    }
+  });
+
+  $("#check_answers").click(function(e) {
+    $("#answers").addClass("show-answers");
+  });
+  // $("button.order-btn").click (e) ->
+  //   $(".lab-content").addClass("visible")
+  //   console.log "hey"
+</script>

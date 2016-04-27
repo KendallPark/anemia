@@ -1,0 +1,201 @@
+labs:
+  Hgb:
+    norm_min: 13.5
+    norm_max: 18
+    min: 6
+    max: 20
+    unit:  mmol/L
+    group: CBC
+  MCV:
+    norm_min: 80
+    norm_max: 96
+    min: 60
+    max: 120
+    unit:  mmol/L
+    group: CBC
+  WBC:
+    norm_min: 4500
+    norm_max: 11000
+    min: 2000
+    max: 15000
+    unit: x 10^9/L
+    group: CBC
+  Platelets:
+    norm_min: 150000
+    norm_max: 400000
+    min: 100000
+    max: 500000
+    unit: x 10^9/L
+    group: CBC
+  Reticulocyte Count:
+    norm_min: 0.5
+    norm_max: 1.5
+    min: 0.1
+    max: 6
+    unit: "%"
+    group: self
+  Serum Iron:
+    norm_min: 50
+    norm_max: 170
+    min: 5
+    max: 300
+    unit: μmol/L
+    group: Iron Studies
+  TIBC:
+    norm_min: 45
+    norm_max: 85
+    min: 5
+    max: 300
+    unit: µmol/L
+    group: Iron Studies
+  Ferritin:
+    norm_min: 15
+    norm_max: 200
+    min: 5
+    max: 1000
+    unit: μg/L
+    group: Iron Studies
+  Serum B12:
+    norm_min: 130
+    norm_max: 700
+    min: 50
+    max: 1000
+    unit: ng/L
+    group: B12 and Folate
+  Serum Folate:
+    norm_min: 7
+    norm_max: 36
+    min: 2
+    max: 100
+    unit: nmol/L
+    group: B12 and Folate
+  Methylmalonate:
+    norm_min: 0
+    norm_max: 0.4
+    min: 0
+    max: 10
+    unit: µg/dL
+    group: self
+  Homocysteine:
+    norm_min: 6.3
+    norm_max: 11.2
+    min: 3
+    max: 20
+    unit: µmol/L
+    group: self
+  LDH:
+    norm_min: 140
+    norm_max: 280
+    min: 50
+    max: 1000
+    unit: U/L
+    group: self
+  Total Bilirubin:
+    norm_min: 0.1
+    norm_max: 1
+    min: 0
+    max: 10
+    unit: mg/dL
+    group: Bilirubin
+  Direct Bilirubin:
+    norm_min: 0.0
+    norm_max: 0.3
+    min: 0
+    max: 0
+    unit: mg/dL
+    group: Bilirubin
+  Creatinine:
+    norm_min: 0.6
+    norm_max: 1.2
+    min: 0.2
+    max: 1.6
+    unit: U/L
+    group: CBC
+  Haptoglobin:
+    norm_min: 41
+    norm_max: 165
+    min: 10
+    max: 300
+    unit: mg/dL
+    group: self
+  TSH:
+    norm_min: 0.5
+    norm_max: 4
+    min: 0.1
+    max: 15
+    unit: mIU/L
+    group: Thyroid Panel
+  Total T4:
+    norm_min: 4.5
+    norm_max: 11.5
+    min: 1
+    max: 20
+    unit: ug/dL
+    group: Thyroid Panel
+
+  # Albumin:
+  #   norm_min: 3.5
+  #   norm_max: 5.3
+  #   min: 2
+  #   max: 7
+  #   unit: g/dL
+  #   group: Liver Panel
+  #   AST:
+  #     norm_min: 6
+  #     norm_max: 40
+  #     min: 0
+  #     max: 1000
+  #     unit: IU/L
+  #     group: Liver Panel
+  # ALT:
+  #   norm_min: 6
+  #   norm_max: 40
+  #   min: 0
+  #   max: 300
+  #   unit: IU/L
+  #   group: Liver Panel
+  # Alkaline Phosphatase:
+  #   norm_min: 6
+  #   norm_max: 40
+  #   min: 0
+  #   max: 300
+  #   unit: IU/L
+  #   group: Liver Panel
+
+findings:
+  Siderocytes:
+    normal: negative
+    abnormal: 2+
+    group: Peripheral Smear
+  Teardrop Red Cells:
+    normal: negative
+    abnormal: 1+
+    group: Peripheral Smear
+  Target Cells:
+    normal: negative
+    abnormal: 2+
+    group: Peripheral Smear
+  Schistocytes:
+    normal: negative
+    abnormal: 2+
+    group: Peripheral Smear
+  Spherocytes:
+    normal: negative
+    abnormal: 1+
+    group: Peripheral Smear
+  Bite Cells:
+    normal: negative
+    abnormal: 1+
+    group: Peripheral Smear
+  Splenomegaly:
+    normal: negative
+    abnormal: present
+    group: Physical Exam
+  Liver Enzymes:
+    normal: normal
+    abnormal: elevated
+    group: Liver Panel
+  Drug Screen:
+    normal: negative
+    abnormal: positive for ALL THE THINGS
+    group: Drug Screen

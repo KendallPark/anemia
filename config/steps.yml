@@ -1,0 +1,120 @@
+steps:
+  -
+    reqs:
+      - Hgb: low
+    children:
+      -
+        reqs:
+          - MCV: low
+        children:
+          -
+            reqs:
+              - Serum Iron: low
+              - TIBC: high
+              - Ferritin: low
+            answer:
+              - Iron deficiency anemia
+          -
+            reqs:
+              - Serum Iron: low
+              - TIBC:
+                  - norm
+                  - low
+              - Ferritin: norm
+            answer:
+              - Anemia of chronic disease (infection, inflammation, malignancy)
+          -
+            reqs:
+              - Serum Iron:
+                  - norm
+                  - high
+              - TIBC:
+                  - norm
+                  - high
+                  - low
+              - Ferritin:
+                  - norm
+                  - high
+            children:
+              -
+                reqs:
+                  - Siderocytes: abnormal
+                answer:
+                  - Sideroblastic anemia
+              -
+                reqs:
+                  - Teardrop Red Cells: abnormal
+                  - Target Cells: abnormal
+                  - Splenomegaly: abnormal
+                answer:
+                  - Alpha or beta thalassemia
+      -
+        reqs:
+          - MCV: norm
+        children:
+          -
+            reqs:
+              - LDH: high
+              - Direct Bilirubin: norm
+              - Total Bilirubin: high
+              - Haptoglobin: low
+              - Schistocytes: abnormal
+              - Spherocytes: abnormal
+              - Bite Cells: abnormal
+            answer:
+              - Hemolytic anemia
+          -
+            reqs:
+              - Creatinine: high
+            answer:
+              - Renal insufficiency
+          -
+            reqs:
+              - Reticulocyte Count: norm
+            answer:
+              - Bone marrow suppression
+      -
+        reqs:
+          - MCV: high
+        children:
+          -
+            reqs:
+              - WBC: low
+              - Platelets: low
+            answer:
+              - Myelodysplastic disorder
+          -
+            reqs:
+              - Serum B12: low
+              - Methylmalonate: high
+              - Homocysteine: high
+            answer:
+              - B12 deficiency
+          -
+            reqs:
+              - Serum Folate: low
+              - Methylmalonate: norm
+              - Homocysteine: high
+            answer:
+              - Folate deficiency
+          -
+            reqs:
+              - Liver Enzymes: abnormal
+            answer:
+              - Liver disease
+          -
+            reqs:
+              - Reticulocyte Count: high
+            answer:
+              - Reticulocytosis
+          -
+            reqs:
+              - Drug Screen: abnormal
+            answer:
+              - Drugs
+          -
+            reqs:
+              - TSH: high
+              - Total T4: low
+            answer:
+              - Hypothyroidism

@@ -1,0 +1,44 @@
+@import "bootswatch/readable/variables";
+
+.lab.hid {
+  visibility: hidden;
+}
+
+.lab-content.vis .lab {
+  visibility: visible;
+}
+
+.lab-content.vis .order {
+  display: none;
+}
+
+.order {
+  float: right;
+}
+
+p {
+  line-height: 12px;
+}
+
+#check_answers {
+  float: right;
+}
+
+.show-answers {
+  .unnecessary .vis {
+    color: $brand-danger !important;
+  }
+  .necessary {
+    color: $brand-success !important;
+  }
+
+  .correct {
+    color: $brand-success;
+  }
+  .incorrect {
+    color: gray;
+    input[type="radio"]:checked + div {
+      color: $brand-danger !important;
+    }
+  }
+}
