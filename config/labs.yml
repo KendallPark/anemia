@@ -199,3 +199,7 @@ findings:
     normal: negative
     abnormal: positive for ALL THE THINGS
     group: Drug Screen
+  Fecal Occult Blood:
+    normal: negative
+    abnormal: positive
+    group: Fecal Occult Blood

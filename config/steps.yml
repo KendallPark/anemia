@@ -61,8 +61,15 @@ steps:
               - Schistocytes: abnormal
               - Spherocytes: abnormal
               - Bite Cells: abnormal
+              - Reticulocyte Count: high
             answer:
               - Hemolytic anemia
+          -
+            reqs:
+              - Reticulocyte Count: high
+              - Fecal Occult Blood: abnormal
+            answer:
+              - Blood loss anemia
           -
             reqs:
               - Creatinine: high
